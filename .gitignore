@@ -87,3 +87,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Configuration file and seen submissions list
+config.ini
+seen.txt
