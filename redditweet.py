@@ -47,8 +47,8 @@ def tweeter(subreddit):
         found = duplicate_check(submission.id)
         if found == 0:
             print ("[bot] Posting this link on twitter")
-            print((submission.id +" "+submission.title+" "+submission.permalink))
-            api.update_status(submission.title+" "+submission.permalink)
+            print((submission.id +" "+strip_title(submission.title)+" "+submission.permalink))
+            api.update_status(strip_title(submission.title)+" "+submission.permalink)
             add_id_to_file(submission.id)
             time.sleep(10)
         else:
